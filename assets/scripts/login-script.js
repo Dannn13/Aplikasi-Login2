@@ -1,17 +1,9 @@
-/*
- * Catatan:
- * Gunakan fungsi goToHome() untuk menampilkan halaman home
- * Gunakan fungsi goToLogin() untuk menampilkan halaman login
- * Gunakan fungsi showPopUp() untuk menampilkan pop up error
- */
 /** @Module Login-Script*/
 /** 
 * Membuat variable loginFormElement untuk tampilan Form.
 * @constant {HTMLElement} 
 */
 const loginFormElement = document.querySelector('#loginForm');
-
-
 /** 
 * Membuat variable inputEmailElement untuk tampilan imput email. 
 * @constant {HTMLElement}
@@ -35,8 +27,8 @@ const expectedPassword = 'superpassword';
 /* Comment :  Menambahkan aksi klik pada button. */
 loginFormElement.addEventListener('submit', function(event) {
   event.preventDefault();
-/** 
-   * Membuat variabel email untuk menyimpan nilai email yang didapatkan saat button ditekan.
+  /** 
+  * Membuat variabel email untuk menyimpan nilai email yang didapatkan saat button ditekan.
    * @constant {string}
    */
   const email = inputEmailElement.value;
@@ -45,7 +37,7 @@ loginFormElement.addEventListener('submit', function(event) {
    * @constant {string}
    */
   const password = inputPasswordElement.value;
-    /* Comment : Memastikan bahwa nilai email dan password sesuai dengan nilai yang tersimpan. */
+  /* Comment : Memastikan bahwa nilai email dan password sesuai dengan nilai yang tersimpan. */
   if (email == expectedEmail && password == expectedPassword) {
     /* Comment : Jika sesuai maka program akan berpindah ke halaman home. */
     goToHome();
